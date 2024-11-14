@@ -9,7 +9,7 @@ html, body {
     height: 100%;
     background-color: #0d141a;
     color:#f8f1d0;
-    font-family: 'source sans 3';
+    font-family: 'PT Sans';
 }
 
 .head {
@@ -23,7 +23,7 @@ html, body {
     margin: 0;
     flex-grow: 1;
     text-transform: uppercase;
-    font-family: 'oswald';
+    font-family: 'Merriweather';
     -webkit-text-stroke: 1px #0d141a;
 }
 
@@ -68,37 +68,51 @@ html, body {
     height: 80%;
     padding-left: 90px;
     margin-bottom: 0;
+    animation-duration: 2s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
 }
 
-.me {
-    margin-top: 0;
-    text-align:center;
-    color: #e2b981;
-}
+@keyframes slide {
+    from {
+        margin-top:0;
+    }
 
-.desc {
-    background-image:url("b2.png");
-    flex: 0.6;
+    to {
+        margin-top: 15px;
+    }
 }
+    .me {
+        margin-top: 0;
+        text-align: center;
+        color: #e2b981;
+    }
 
-.m {
-    padding-top: 20px;
-    padding-bottom: 50px;
-    padding-left: 10px;
-    font-size: 35px;
-    padding-right: 100px;
-}
+    .desc {
+        background-image: url("b2.png");
+        flex: 0.6;
+    }
 
-.text {
-    display: flex;
-    padding-right: 100px;
-    font-size: 30px;
-    padding-right: 100px;
-    padding-bottom: 50px;
-}
+    .m {
+        padding-top: 20px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        font-size: 35px;
+        padding-right: 100px;
+    }
 
-#mark{
-    height:80px;
-    width:auto;
-    padding-right:10px;
-}
+    .text {
+        display: flex;
+        padding-right: 100px;
+        font-size: 30px;
+        padding-right: 100px;
+        padding-bottom: 50px;
+    }
+
+    #mark {
+        height: 100px;
+        width: auto;
+        padding-right: 10px;
+    }
