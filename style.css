@@ -102,3 +102,7 @@ html, body {
     width:auto;
     padding-right:10px;
 }
+
+div{
+    flex-wrap: wrap;
+}
