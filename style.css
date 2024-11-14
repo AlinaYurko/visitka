@@ -106,3 +106,7 @@ html, body {
 div{
     flex-wrap: wrap;
 }
+
+span{
+    border: 2px solid  #e2b981;
+}
