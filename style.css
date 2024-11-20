@@ -121,6 +121,7 @@ html, body {
     background-color: #505168;
     margin: 0;
     padding: 20px;
+    margin-bottom:20px;
     text-align: center;
     font-size: 45px;
     font-family: 'Merriweather';
@@ -147,8 +148,9 @@ html, body {
     font-size: 18px;
 }
 
-.card img{
-    margin:10px;
+.card img {
+    margin: 10px;
+    border-radius: 4px;
 }
 
 .t {
@@ -164,14 +166,15 @@ html, body {
         height: 50px;
     }
 }
-@media (max-width: 900px) {
-    .group{
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
+@media(max-width:1024px) {
+    .group {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
     .card {
-        width: 100%;
+        width: 40vw;
         margin: 10px;
     }
 }
