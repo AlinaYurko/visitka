@@ -9,7 +9,7 @@ html, body {
     height: 100%;
     background-color: #0d141a;
     color:#f8f1d0;
-    font-family: 'PT Sans';
+    font-family: 'pt sans';
 }
 
 .head {
@@ -21,7 +21,6 @@ html, body {
     height: 70px;
     font-size: 45px;
     margin: 0;
-    flex-grow: 1;
     text-transform: uppercase;
     font-family: 'Merriweather';
     -webkit-text-stroke: 1px #0d141a;
@@ -51,21 +50,22 @@ html, body {
 
 .block {
     display: flex;
-    height: 100vh;
+    height:auto;
     width:100%;
-    padding-top:0;
+    padding:0;
+    margin:0;
  }
 
 .pic {
     flex: 0.4;
     color: #f8f1d0;
     font-size: 40px;
-    padding-top:20px;
+    padding-top:10px;
 }
 
 #picture {
     display: block;
-    height: 80%;
+    width: 60%;
     padding-left: 90px;
     margin-bottom: 0;
     animation-duration: 2s;
@@ -84,35 +84,100 @@ html, body {
         margin-top: 15px;
     }
 }
-    .me {
-        margin-top: 0;
-        text-align: center;
-        color: #e2b981;
-    }
+.me {
+    margin-top: 0;
+    text-align: center;
+    color: #e2b981;
+}
 
-    .desc {
-        background-image: url("b2.png");
-        flex: 0.6;
-    }
+.desc {
+    background-image: url("b2.png");
+    flex: 0.6;
+}
 
-    .m {
-        padding-top: 20px;
-        padding-bottom: 50px;
-        padding-left: 10px;
+.m {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    font-size: 35px;
+    padding-right: 100px;
+}
+
+.text {
+    display: flex;
+    padding-right: 100px;
+    font-size: 30px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+}
+
+#mark {
+    height: 100px;
+    width: auto;
+    padding-right: 10px;
+}
+
+.part {
+    background-color: #505168;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Merriweather';
+    -webkit-text-stroke: 1px #0d141a;
+    text-transform: uppercase;
+}
+
+.group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f1d0;
+    border-radius: 4px;
+    color: #0d141a;
+    padding: 15px;
+    margin: 15px;
+    width: 20vw;
+    height: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.card img{
+    margin:10px;
+}
+
+.t {
+    color: #0d141a;
+    margin: 5px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .block, .pic, .desc {
+        height: 50px;
+    }
+}
+@media (max-width: 900px) {
+    .group{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    .card {
+        width: 100%;
+        margin: 10px;
+    }
+}
+@media(max-width:1024px) {
+    .head {
         font-size: 35px;
-        padding-right: 100px;
+        margin-top: 10px;
     }
-
-    .text {
-        display: flex;
-        padding-right: 100px;
-        font-size: 30px;
-        padding-right: 100px;
-        padding-bottom: 50px;
-    }
-
-    #mark {
-        height: 100px;
-        width: auto;
-        padding-right: 10px;
-    }
+}
