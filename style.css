@@ -176,7 +176,26 @@ html, body {
     .card {
         width: 60vw;
         margin: 10px;
+        font-size: 25px;
     }
+    .t{
+        font-size: 30px;
+    }
+    .block {
+        display: flex;
+        height:auto;
+        width:100%;
+        padding:0;
+        margin:0;
+     }
+    
+    .pic {
+        flex: 1;
+    }
+    .desc {
+        flex: 1;
+    }
+    
 }
 @media(max-width:1024px) {
     .head {
