@@ -360,39 +360,39 @@ html, body {
 }
 
 @media(max-width:768px){
-    .grid-item:focus {
+    .grid-item:focus-within {
         transform: scale(1.1);
         z-index: 2;
         border: 1px solid #0d141a;
     }
-    .item3:focus {
+    .item3:focus-within {
         background-color: rgba(226, 185, 129, 0.98);
     }
 
-    .item5:focus {
+    .item5:focus-within {
         background-color: rgba(226, 185, 129, 0.98);
     }
 
-    .item2:focus {
+    .item2:focus-within {
         background-color: rgba(91, 142, 125, 0.98);
     }
 
-    .item4:focus {
+    .item4:focus-within {
         background-color: rgba(91, 142, 125, 0.98);
     }
 
-    .item1:focus {
+    .item1:focus-within {
         transform: scale(1);
     }
-    .grid-item:focus .cap {
+    .grid-item:focus-within .cap {
         opacity: 1;
     }
 
-    .grid-item:focus .tit {
+    .grid-item:focus-within .tit {
         opacity: 1;
     }
 
-    .grid-item:focus .pickme {
+    .grid-item:focus-within .pickme {
         opacity: 0;
     }
 }
