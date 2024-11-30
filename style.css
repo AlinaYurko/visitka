@@ -360,39 +360,39 @@ html, body {
 }
 
 @media(max-width:768px){
-    .grid-item:visited {
+    .grid-item:focus {
         transform: scale(1.1);
         z-index: 2;
         border: 1px solid #0d141a;
     }
-    .item3:visited {
+    .item3:focus {
         background-color: rgba(226, 185, 129, 0.98);
     }
 
-    .item5:visited {
+    .item5:focus {
         background-color: rgba(226, 185, 129, 0.98);
     }
 
-    .item2:visited {
+    .item2:focus {
         background-color: rgba(91, 142, 125, 0.98);
     }
 
-    .item4:visited {
+    .item4:focus {
         background-color: rgba(91, 142, 125, 0.98);
     }
 
-    .item1:visited {
+    .item1:focus {
         transform: scale(1);
     }
-    .grid-item:visited .cap {
+    .grid-item:focus .cap {
         opacity: 1;
     }
 
-    .grid-item:visited .tit {
+    .grid-item:focus .tit {
         opacity: 1;
     }
 
-    .grid-item:visited .pickme {
+    .grid-item:focus .pickme {
         opacity: 0;
     }
 }
