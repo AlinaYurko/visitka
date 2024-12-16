@@ -12,12 +12,13 @@ html, body {
     font-family: 'pt sans';
 }
 
-.head {
+.head, .end {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-around;
     background-color: #505168;
+    color: #f8f1d0;
     height: 70px;
     font-size: 45px;
     margin: 0;
@@ -25,6 +26,7 @@ html, body {
     font-family: 'Merriweather';
     -webkit-text-stroke: 1px #0d141a;
 }
+
 
 .title {
     color: #f8f1d0;
@@ -46,6 +48,58 @@ html, body {
     .icon:hover {
         transform: scale(1.6);
     }
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+    .nav-links li {
+        margin: 0 15px;
+    }
+
+    .nav-links a {
+        color: #f8f1d0; /* светлый текст */
+        font-size: 30px;
+        text-decoration:none;
+        transition: color 0.3s; /* Плавный переход цвета */
+    }
+
+        .nav-links a:hover {
+            color: #e2b981; /* оранжевый при наведении */
+        }
+
+.burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Стили для мобильного меню */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #0d141a; /* черный фон для мобильного меню */
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+    .burger {
+        display: block;
+        color: #f8f1d0; /* светлый цвет бургер-меню */
+    }
+}
+
 
 .block {
     display: flex;
