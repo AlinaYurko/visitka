@@ -9,21 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="head">
-    <nav class="navbar">
-        <div class="burger" id="burger">
-            &#9776;
+    <header class=" header">
+        <div class="logo">
+            <img src="eatmp.png" width="99">
         </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#about">Обо мне</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
-    </nav>
-</div>
-    <script src="java.js"></script>
+        <nav class="nav">
+            <ul>
+                <li><a href="#obomne">Обо мне</a></li>
+                <li><a href="#exp">Опыт</a></li>
+                <li><a href="#pros">Преимущества</a></li>
+                <li><a href="#cont">Контакты</a></li>
+            </ul>
+        </nav>
 
-    <div class="block">
+        <div class="burger">
+            <span></span>
+        </div>
+    </header>
+
+    <div class="block" id="obomne">
         <div class="pic">
             <div class="me">Приветствую, я таролог Алина!</div>
             <img src="1.png" id="picture">
@@ -49,7 +53,7 @@
         Мой опыт
     </p>
     <div class="gr">
-        <div class="group">
+        <div class="group" id="exp">
             <div class="card">
                 <img src="card1.png" id="card">
                 <div class="t">2 года практики</div>
@@ -66,9 +70,10 @@
                 Десятки довольных клиентов с повторными обращениями.
             </div>
         </div>
-        <div class="advant">Мои преимущества</div>
+        <div class="advant" id="pros">Мои преимущества</div>
         <div class="pumpitup">
-            <div class="grid-container">
+
+            <div class="grid-container" >
                 <div class="grid-item item2">
                     <img src="moon.png" class="pickme">
                     <div class="tit">Индивидуальный подход</div>
@@ -92,7 +97,8 @@
             </div>
         </div>
     </div>
-    <div class="end">
+
+    <div class="foot" id="cont">
         <div class="title">
             Юрко Алина
         </div>
@@ -105,5 +111,35 @@
             <a href="https://www.instagram.com/aliinayurko/profilecard/?igsh=ZXc3ZDVrMXY4NWJx" target="_blank"><img src="inst.png" class="icon" width="40"></a>
         </div>
     </div>
+
+    <script>
+                    // Обработчик для бургер-меню
+            document.querySelector('.burger').addEventListener('click', function () {
+                this.classList.toggle('active');
+                const nav = document.querySelector('.nav');
+                nav.classList.toggle('open');
+
+                // Добавьте класс fixed к бургеру, если меню открыто
+                if (nav.classList.contains('open')) {
+                    this.classList.add('fixed');
+                } else {
+                    this.classList.remove('fixed');
+                }
+            });
+
+            // Обработчики для пунктов навигации
+            document.querySelectorAll('.nav ul li a').forEach(link => {
+                link.addEventListener('click', function () {
+                    // Закрываем навигацию
+                    document.querySelector('.nav').classList.remove('open');
+                    document.querySelector('.burger').classList.remove('active');
+
+                    // Удаляем класс fixed, если необходимо
+                    document.querySelector('.burger').classList.remove('fixed');
+                });
+            });
+
+    </script>
+
 </body>
 </html>
