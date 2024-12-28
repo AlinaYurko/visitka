@@ -551,3 +551,45 @@ html, body {
         opacity: 0;
     }
 }
+
+
+
+.feedback-form {
+    margin:50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    .feedback-form h2 {
+        margin-bottom: 15px;
+    }
+
+    .feedback-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .feedback-form button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .feedback-form button:hover {
+            background-color: #218838;
+        }

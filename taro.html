@@ -73,7 +73,7 @@
         <div class="advant" id="pros">Мои преимущества</div>
         <div class="pumpitup">
 
-            <div class="grid-container" >
+            <div class="grid-container">
                 <div class="grid-item item2">
                     <img src="moon.png" class="pickme">
                     <div class="tit">Индивидуальный подход</div>
@@ -98,6 +98,52 @@
         </div>
     </div>
 
+
+    <div class="feedback-form">
+        <h2>Оставьте свой отзыв</h2>
+        <form id="contact-form" action="https://getform.io/f/bmddokqa" method="POST">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Отправить отзыв</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+
+            // Отправка формы с использованием Fetch API
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Отзыв успешно отправлен!'); // Уведомление об успешной отправке
+                        this.reset(); // Очищаем поля формы
+                    } else {
+                        alert('Произошла ошибка. Попробуйте еще раз.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Ошибка:', error);
+                    alert('Произошла ошибка. Попробуйте еще раз.');
+                });
+        });
+    </script>
+
+
+
+
+
+
     <div class="foot" id="cont">
         <div class="title">
             Юрко Алина
@@ -113,31 +159,31 @@
     </div>
 
     <script>
-                    // Обработчик для бургер-меню
-            document.querySelector('.burger').addEventListener('click', function () {
-                this.classList.toggle('active');
-                const nav = document.querySelector('.nav');
-                nav.classList.toggle('open');
+        // Обработчик для бургер-меню
+        document.querySelector('.burger').addEventListener('click', function () {
+            this.classList.toggle('active');
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('open');
 
-                // Добавьте класс fixed к бургеру, если меню открыто
-                if (nav.classList.contains('open')) {
-                    this.classList.add('fixed');
-                } else {
-                    this.classList.remove('fixed');
-                }
+            // Добавьте класс fixed к бургеру, если меню открыто
+            if (nav.classList.contains('open')) {
+                this.classList.add('fixed');
+            } else {
+                this.classList.remove('fixed');
+            }
+        });
+
+        // Обработчики для пунктов навигации
+        document.querySelectorAll('.nav ul li a').forEach(link => {
+            link.addEventListener('click', function () {
+                // Закрываем навигацию
+                document.querySelector('.nav').classList.remove('open');
+                document.querySelector('.burger').classList.remove('active');
+
+                // Удаляем класс fixed, если необходимо
+                document.querySelector('.burger').classList.remove('fixed');
             });
-
-            // Обработчики для пунктов навигации
-            document.querySelectorAll('.nav ul li a').forEach(link => {
-                link.addEventListener('click', function () {
-                    // Закрываем навигацию
-                    document.querySelector('.nav').classList.remove('open');
-                    document.querySelector('.burger').classList.remove('active');
-
-                    // Удаляем класс fixed, если необходимо
-                    document.querySelector('.burger').classList.remove('fixed');
-                });
-            });
+        });
 
     </script>
 
